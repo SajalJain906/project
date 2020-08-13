@@ -22,3 +22,4 @@ subject <- factor(subject$V1)
 
 new_dataset <- aggregate(x_new,list(subject,y_named),mean)
 colnames(new_dataset)[1:2] <- c("subject","activity")
+write.table(new_dataset,file="new_dataset.txt",row.names = FALSE)
